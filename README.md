@@ -6,6 +6,7 @@
   - $ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 - Install powerlevel9k 
   - git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+ - Install tmux
  - Install stow
  - go to dotfiles directory
   - stow every folder there except cascadia
