@@ -28,13 +28,13 @@ set undofile
 set incsearch "while you search you get results
 set colorcolumn=80 "show a line in column 80
 set wrap
+set cmdheight=2
 
 
 "PLUGINS
 call plug#begin('~/.vim/plugged')
 
 Plug 'morhetz/gruvbox'
-Plug 'ycm-core/YouCompleteMe'
 Plug 'jremmen/vim-ripgrep'
 Plug 'tpope/vim-fugitive'
 Plug 'leafgarland/typescript-vim'
@@ -43,6 +43,7 @@ Plug 'lyuts/vim-rtags'
 Plug 'git@github.com:kien/ctrlp.vim.git'
 Plug 'mbbill/undotree'
 Plug 'neoclide/coc.nvim', {'branch':'release'}
+Plug 'vim-airline/vim-airline'
 
 call plug#end()
 "PLUGINS END
@@ -83,11 +84,6 @@ nnoremap <silent> <Leader>- :vertical resize -5<CR>
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
-"fun! GoYCM()
-"    nnoremap <buffer> <silent> <leader>gd :YcmCompleter GoTo<CR>
-"    nnoremap <buffer> <silent> <leader>gr :YcmCompleter GoToReferences<CR>
-"    nnoremap <buffer> <silent> <leader>rr :YcmCompleter RefactorRename<space>
-"endfun
 
 "Required COC function
 function! s:check_back_space() abort
