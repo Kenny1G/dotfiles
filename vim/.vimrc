@@ -33,17 +33,26 @@ set cmdheight=2
 
 "PLUGINS
 call plug#begin('~/.vim/plugged')
-
+" Coconut oil
 Plug 'morhetz/gruvbox'
+" don't know yet
 Plug 'jremmen/vim-ripgrep'
+" git
 Plug 'tpope/vim-fugitive'
-Plug 'leafgarland/typescript-vim'
+" don't know yet
 Plug 'vim-utils/vim-man'
+" don't know yet
 Plug 'lyuts/vim-rtags'
+" file search
 Plug 'git@github.com:kien/ctrlp.vim.git'
+" visual undo
 Plug 'mbbill/undotree'
+" auto complete
 Plug 'neoclide/coc.nvim', {'branch':'release'}
+" powerline for vim
 Plug 'vim-airline/vim-airline'
+" file explorer
+Plug 'preservim/nerdtree'
 
 call plug#end()
 "PLUGINS END
@@ -77,7 +86,7 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>u :UndotreeShow<CR>
 "opens small file tree to the left
-nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+nnoremap <leader>pv :NERDTreeToggle<Enter> 
 nnoremap <Leader>ps :Rg<SPACE>
 nnoremap <silent> <Leader>+ :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertical resize -5<CR>
