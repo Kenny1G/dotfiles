@@ -16,6 +16,9 @@ alias minion='work && cd cesi_sg_companion/head/bsd_build/'
 alias pcaps='work && cd pcap_query_server/head/bsd_build'
 alias sg='work && cd ServicesGui/head'
 alias shared='work && cd Shared/head/'
+alias spcap='work && cd SharedPcap/head'
+alias cscan='work && cd CesiscanExe/head'
+alias ta='work && cd talonAgent/head'
 alias file='explorer.exe .'
 
 
@@ -37,8 +40,8 @@ alias pd='pwd'
 alias t='time'
 alias k='kill -9'
 alias n='nvim'
-alias edal='code ~/.bash_aliases'
-alias upbash='source ~/.bashrc'
+alias edal='vim ~/.bash_aliases'
+alias upbash='source ~/.zshrc'
 
 #git
 alias g='git'
@@ -48,9 +51,11 @@ alias clone='git clone'
 alias sth='git stash'
 alias lg='git log'
 alias u='git add -u'
-alias all='git add .'
+alias all='git add -A'
+alias gcout='git checkout'
 
 #
 #this box only
 alias home='cd /mnt/c/Code'
 alias work='cd /mnt/c/Code/CESI'
+alias csg='cd /mnt/c/ProgramData/CyberESI/CesiSG/'
