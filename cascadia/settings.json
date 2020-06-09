@@ -202,7 +202,7 @@
 
 
 		 { "command" : "newTab", "keys" : "ctrl+t" },
-		 {"command" : "closeTab","keys" : "ctrl+w"},
+		 //{"command" : "closeTab","keys" : "ctrl+w"},
 		 { "command": { "action": "switchToTab", "index": 0}, "keys": "alt+1" },
 		 { "command": { "action": "switchToTab", "index": 1}, "keys": "alt+2" },
 		 { "command": { "action": "switchToTab", "index": 2}, "keys": "alt+3" },
