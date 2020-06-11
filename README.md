@@ -13,8 +13,12 @@
   - stow every folder there except cascadia
   - for cascadia replace the file, you know how ;)
 
-##VIM
+## VIM 
+- vim version 8.2 preferred
 - install plugged
-   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  - curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 - run :PlugInstall 
+- install nvm 
+  - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+  - nvm install node
+
