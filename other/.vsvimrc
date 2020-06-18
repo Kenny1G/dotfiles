@@ -1,0 +1,42 @@
+" SOME DEFAULTS
+let mapleader = " "
+set tabstop=3 "3 chars long
+set softtabstop=3 "3 spaces long
+set shiftwidth=3 "arrows moves 3 spaces
+set expandtab "use spaces not tabs
+set number
+set smartcase "case insensitive search until I put in a capital letter
+set showcmd "show command in bottom bar
+set cursorline  "highlight current line
+set incsearch "search as characters are entered
+set hlsearch "highlight matches
+" move vertically by visual line
+nnoremap j gj
+nnoremap k gk
+" highlight last inserted text
+nnoremap gV `[v`]
+" remap escape to jj
+imap jj <Esc>
+set incsearch "while you search you get results
+" unhighlight text
+nnoremap <C-n> :noh <CR>
+
+"move to right vim window
+nnoremap <leader>h :wincmd h<CR> 
+"move to bottom vim window
+nnoremap <leader>j :wincmd j<CR>
+"move to top vim window
+nnoremap <leader>k :wincmd k<CR>
+"move to left vim window
+nnoremap <leader>l :wincmd l<CR>
+nnoremap <leader>u :UndotreeShow<CR>
+"opens small file tree to the left
+nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+nnoremap <Leader>ps :Rg<SPACE>
+nnoremap <silent> <Leader>+ :vertical resize +5<CR>
+nnoremap <silent> <Leader>- :vertical resize -5<CR>
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
+
+
