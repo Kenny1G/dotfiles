@@ -1,5 +1,5 @@
 " SOME DEFAULTS
-let mapleader = " "
+let mapleader="\<space>"
 set tabstop=3 "3 chars long
 set softtabstop=3 "3 spaces long
 set shiftwidth=3 "arrows moves 3 spaces
@@ -19,22 +19,22 @@ nnoremap gV `[v`]
 imap jj <Esc>
 set incsearch "while you search you get results
 " unhighlight text
-nnoremap <C-n> :noh <CR>
+nnoremap <leader>n  :noh <CR>
 
 "move to right vim window
-nnoremap <leader>h :wincmd h<CR> 
+nnoremap <leader>h <C-w>h 
 "move to bottom vim window
-nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>j <C-w>j
 "move to top vim window
-nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>k <C-w>k
 "move to left vim window
-nnoremap <leader>l :wincmd l<CR>
+nnoremap <leader>l <C-w>l
 nnoremap <leader>u :UndotreeShow<CR>
 "opens small file tree to the left
-nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+nnoremap <leader>pv <C-w> v<bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <Leader>ps :Rg<SPACE>
-nnoremap <silent> <Leader>+ :vertical resize +5<CR>
-nnoremap <silent> <Leader>- :vertical resize -5<CR>
+nnoremap  <Leader>+ :vertical resize +5<CR>
+nnoremap  <Leader>- :vertical resize -5<CR>
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
