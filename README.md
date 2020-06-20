@@ -15,7 +15,7 @@
 
 ## VIM 
 - vim version 8.2 preferred
- - https://github.com/ycm-core/YouCompleteMe/wiki/Building-Vim-from-source
+  - https://github.com/ycm-core/YouCompleteMe/wiki/Building-Vim-from-source
 - install plugged
   - curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 - run :PlugInstall 
