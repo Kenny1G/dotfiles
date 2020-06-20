@@ -116,8 +116,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export EDITOR='code'
-export VISUAL='code'
+export EDITOR='vim'
+export VISUAL='vim'
 
 #lazy git
 function lazygit()
@@ -132,3 +132,7 @@ up()
 {
 	cd $(eval printf '../'%.0s {1..$1}) && pwd; 
 }
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
