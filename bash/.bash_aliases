@@ -1,5 +1,6 @@
 #ssh
 alias freebies='ssh root@192.168.169.128'
+alias hless='ssh -X kennyosele@192.168.1.152'
 
 
 #this system
@@ -19,6 +20,7 @@ alias shared='work && cd Shared/head/'
 alias spcap='work && cd SharedPcap/head'
 alias cscan='work && cd CesiscanExe/head'
 alias ta='work && cd talonAgent/head'
+alias gang='home && cd ganggang'
 alias file='explorer.exe .'
 
 
