@@ -86,7 +86,7 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>u :UndotreeShow<CR>
 "opens small file tree to the left
-nnoremap <leader>pv :NERDTreeToggle<Enter> 
+nnoremap <leader>pv :NERDTreeFocus<Enter> 
 nnoremap <Leader>ps :Rg<SPACE>
 nnoremap <silent> <Leader>+ :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertical resize -5<CR>
