@@ -22,8 +22,6 @@ nnoremap k gk
 nnoremap gV `[v`]
 " remap escape to jj
 imap jj <Esc>
-" clear highlight
-nnoremap <leader>n :noh<CR>
 set nobackup "none of those swap files
 set undodir=~/.vim/undodir "save backups to .vim/undodir
 set undofile
@@ -32,9 +30,9 @@ set colorcolumn=80 "show a line in column 80
 set wrap
 set cmdheight=2
 set backspace=indent,eol,start  " more powerful backspacing
-" gui font
-set guifont="CaskaydiaCove Nerd Font Mono"
-
+" clear highlight
+nnoremap <leader>n :noh<CR>
+set guifont = "CaskaydiaCove Nerd Font Mono"
 
 "PLUGINS
 call plug#begin('~/.vim/plugged')
