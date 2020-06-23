@@ -30,9 +30,6 @@ set colorcolumn=80 "show a line in column 80
 set wrap
 set cmdheight=2
 set backspace=indent,eol,start  " more powerful backspacing
-" clear highlight
-nnoremap <leader>n :noh<CR>
-set guifont = "CaskaydiaCove Nerd Font Mono"
 
 "PLUGINS
 call plug#begin('~/.vim/plugged')
