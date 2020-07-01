@@ -11,7 +11,7 @@ alias gccc='gcc -Wall -pedantic -Wextra -g'
 alias g+++='g++ -Wall -pedantic -Wextra -g'
 
 #going to workspace directory
-alias work='home && cs CESI'
+alias work='home && cd CESI'
 alias minion='work && cd cesi_sg_companion/head/bsd_build/'
 alias pcaps='work && cd pcap_query_server/head/bsd_build'
 alias sg='work && cd ServicesGui/head'
