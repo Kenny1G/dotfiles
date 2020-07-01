@@ -6,13 +6,12 @@ alias hless='ssh -X kennyosele@toshiba-toaster.duckdns.org'
 #this system
 
 #running stuff
-alias rmn='minion && cd bin && ./companion -i companion.cfg &'
-alias rps=' pcaps && cd bin && ./pcap_query_server -i pcap_query_server.cfg &'
 
 alias gccc='gcc -Wall -pedantic -Wextra -g'
 alias g+++='g++ -Wall -pedantic -Wextra -g'
 
 #going to workspace directory
+alias work='home && cs CESI'
 alias minion='work && cd cesi_sg_companion/head/bsd_build/'
 alias pcaps='work && cd pcap_query_server/head/bsd_build'
 alias sg='work && cd ServicesGui/head'
@@ -56,8 +55,19 @@ alias u='git add -u'
 alias all='git add -A'
 alias gcout='git checkout'
 
-#
-#this box only
-alias home='cd /mnt/c/Code'
-alias work='cd /mnt/c/Code/CESI'
-alias csg='cd /mnt/c/ProgramData/CyberESI/CesiSG/'
+case "$ITISI" in 
+   TOASTER)
+      alias home='cd ~'
+      ;;
+   FREEBIE)
+      alias home='cd ~'
+      alias rmn='minion && cd bin && ./companion -i companion.cfg &'
+      alias rps='pcaps && cd bin && ./pcap_query_server -i pcap_query_server.cfg &'
+      ;;
+   WSL)
+      alias home='cd /mnt/c/Code'
+      alias csg='cd /mnt/c/ProgramData/CyberESI/CesiSG/'
+      ;;
+esac
+
+

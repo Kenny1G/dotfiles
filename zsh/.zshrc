@@ -99,6 +99,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.bash_aliases
+source ~/.name_yaself
 
 #disable username
 export DEFAULT_USER="$(whoami)"
