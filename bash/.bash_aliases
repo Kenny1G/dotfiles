@@ -1,6 +1,6 @@
 #ssh
 alias freebies='ssh root@192.168.169.128'
-alias hless='ssh -X kennyosele@toshiba-toaster@duckdns.org'
+alias hless='ssh -X kennyosele@toshiba-toaster.duckdns.org'
 
 
 #this system
