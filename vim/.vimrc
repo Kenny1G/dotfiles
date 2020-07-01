@@ -29,6 +29,7 @@ set incsearch "while you search you get results
 set colorcolumn=80 "show a line in column 80
 set wrap
 set cmdheight=2
+set backspace=indent,eol,start  " more powerful backspacing
 
 "PLUGINS
 call plug#begin('~/.vim/plugged')
@@ -41,7 +42,7 @@ Plug 'tpope/vim-fugitive'
 " don't know yet
 Plug 'vim-utils/vim-man'
 " don't know yet
-Plug 'lyuts/vim-rtags'
+"Plug 'lyuts/vim-rtags'
 " file search
 Plug 'git@github.com:kien/ctrlp.vim.git'
 " visual undo

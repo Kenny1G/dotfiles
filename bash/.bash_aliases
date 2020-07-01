@@ -20,6 +20,9 @@ alias spcap='work && cd SharedPcap/head'
 alias cscan='work && cd CesiscanExe/head'
 alias ta='work && cd talonAgent/head'
 alias gang='home && cd ganggang'
+alias sss='home && cd HYO/SpotifySucks'
+alias hw='home && cd HYO/hollowic/music-player'
+alias hb='home && cd HYO/hollowic/music-player-backend'
 alias file='explorer.exe .'
 
 
@@ -58,6 +61,7 @@ alias gcout='git checkout'
 case "$ITISI" in 
    TOASTER)
       alias home='cd ~'
+      export DISPLAY=192.168.1.151:1.0
       ;;
    FREEBIE)
       alias home='cd ~'
@@ -69,5 +73,3 @@ case "$ITISI" in
       alias csg='cd /mnt/c/ProgramData/CyberESI/CesiSG/'
       ;;
 esac
-
-
