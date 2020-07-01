@@ -102,7 +102,8 @@ source ~/.bash_aliases
 source ~/.name_yaself
 
 #disable username
-export DEFAULT_USER="$(whoami)"
+prompt_context() { 
+}
 
 #disable full filePath
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
