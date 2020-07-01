@@ -53,6 +53,7 @@ Plug 'neoclide/coc.nvim', {'branch':'release'}
 Plug 'vim-airline/vim-airline'
 " file explorer
 Plug 'preservim/nerdtree'
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 "PLUGINS END
