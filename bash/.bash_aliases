@@ -3,14 +3,20 @@ alias freebies='ssh root@192.168.169.128'
 alias hless='ssh -X kennyosele@toshiba-toaster.duckdns.org'
 
 
-#this system
-
 #running stuff
-
 alias gccc='gcc -Wall -pedantic -Wextra -g'
 alias g+++='g++ -Wall -pedantic -Wextra -g'
 
+
 #going to workspace directory
+
+##From home
+alias gang='home && cd ganggang'
+alias sss='home && cd HYO/SpotifySucks'
+alias hw='home && cd HYO/hollowic/music-player'
+alias hb='home && cd HYO/hollowic/music-player-backend'
+
+## From work
 alias work='home && cd CESI'
 alias minion='work && cd cesi_sg_companion/head/bsd_build/'
 alias pcaps='work && cd pcap_query_server/head/bsd_build'
@@ -19,17 +25,10 @@ alias shared='work && cd Shared/head/'
 alias spcap='work && cd SharedPcap/head'
 alias cscan='work && cd CesiscanExe/head'
 alias ta='work && cd talonAgent/head'
-alias gang='home && cd ganggang'
-alias sss='home && cd HYO/SpotifySucks'
-alias hw='home && cd HYO/hollowic/music-player'
-alias hb='home && cd HYO/hollowic/music-player-backend'
-alias file='explorer.exe .'
 
 
 alias checkrun='sockstat | grep 133'
-alias mnt='kldload fuse.ko && vmhgfs-fuse .host:/CESI CESI'
 
-#ssh
 
 #basic commands
 alias q='exit'
@@ -47,6 +46,7 @@ alias n='nvim'
 alias edal='vim ~/.bash_aliases'
 alias upbash='source ~/.zshrc'
 
+
 #git
 alias g='git'
 alias st='git status'
@@ -57,7 +57,10 @@ alias lg='git log'
 alias u='git add -u'
 alias all='git add -A'
 alias gcout='git checkout'
+alias mer='git merge --no-ff'
 
+
+#System Specifics
 case "$ITISI" in 
    TOASTER)
       alias home='cd ~'
@@ -67,9 +70,11 @@ case "$ITISI" in
       alias home='cd ~'
       alias rmn='minion && cd bin && ./companion -i companion.cfg &'
       alias rps='pcaps && cd bin && ./pcap_query_server -i pcap_query_server.cfg &'
+      alias mnt='kldload fuse.ko && vmhgfs-fuse .host:/CESI CESI'
       ;;
    WSL)
       alias home='cd /mnt/c/Code'
       alias csg='cd /mnt/c/ProgramData/CyberESI/CesiSG/'
+      alias file='explorer.exe .'
       ;;
 esac
