@@ -98,8 +98,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source ~/.bash_aliases
 source ~/.name_yaself
+source ~/.bash_aliases
 
 #disable username
 prompt_context() { 
