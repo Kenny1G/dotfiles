@@ -78,5 +78,6 @@ case "$ITISI" in
       alias home='cd /mnt/c/Code'
       alias csg='cd /mnt/c/ProgramData/CyberESI/CesiSG/'
       alias file='explorer.exe .'
+      alias drop_cache="sudo sh -c \"echo 3 >'/proc/sys/vm/drop_caches' && swapoff -a && swapon -a && printf '\n%s\n' 'Ram-cache and Swap Cleared'\""
       ;;
 esac
