@@ -129,3 +129,6 @@ nnoremap <silent> <Esc>j :TmuxNavigateDown<cr>
 nnoremap <silent> <Esc>k :TmuxNavigateUp<cr>
 nnoremap <silent> <Esc>l :TmuxNavigateRight<cr>
 nnoremap <silent> <Esc>\ :TmuxNavigatePrevious<cr>
+
+"vim fugitive make Gdiff vertical
+set diffopt+=vertical
