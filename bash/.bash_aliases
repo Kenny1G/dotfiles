@@ -1,6 +1,7 @@
 #ssh
 alias freebies='ssh root@192.168.169.128'
 alias wesuck='ssh root@192.168.169.131'
+alias toughie='ssh root@192.168.90.129'
 alias hless='ssh -X kennyosele@toshiba-toaster.duckdns.org'
 
 
