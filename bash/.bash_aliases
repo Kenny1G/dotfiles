@@ -47,7 +47,7 @@ alias t='time'
 alias k='kill -9'
 alias n='nvim'
 alias edal='vim ~/.bash_aliases'
-alias upbash='source ~/.zshrc'
+alias upbash='source ~/.bash_aliases'
 
 
 #git
