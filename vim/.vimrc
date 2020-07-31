@@ -158,7 +158,8 @@ noremap <silent> <leader>ds :Step<cr>
 noremap <silent> <leader>dn :Over<cr>
 noremap <silent> <leader>db :Break<cr>
 noremap <silent> <leader>df :Finish<cr>
-noremap <silent> <leader>ds :Stop<cr>
+noremap <silent> <leader>dh :Stop<cr>
 noremap <silent> <leader>dr :Run<cr>
 noremap <silent> <leader>dc :Continue<cr>
+noremap <silent> <leader>dd :Clear<cr>
 
