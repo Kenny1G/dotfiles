@@ -143,3 +143,22 @@ let g:syntastic_cpp_cpplint_exec = 'cpplint'
 " The following two lines are optional. Configure it to your liking!
 let g:syntastic_check_on_open = 1
 " let g:syntastic_check_on_wq = 0
+
+
+" remove highlighting
+noremap <silent> <leader>n :noh<cr> 
+
+"terminal debug settings
+let g:termdebug_wide=1 "split it vertically
+packadd termdebug "load termdebug on startup
+"mapping to load termdebug
+noremap <silent> <leader>td :Termdebug<cr> 
+" Add mappings for gdb commands
+noremap <silent> <leader>ds :Step<cr>
+noremap <silent> <leader>dn :Over<cr>
+noremap <silent> <leader>db :Break<cr>
+noremap <silent> <leader>df :Finish<cr>
+noremap <silent> <leader>ds :Stop<cr>
+noremap <silent> <leader>dr :Run<cr>
+noremap <silent> <leader>dc :Continue<cr>
+
