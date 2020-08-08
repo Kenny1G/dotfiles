@@ -53,7 +53,10 @@ Plug 'neoclide/coc.nvim', {'branch':'release'}
 Plug 'vim-airline/vim-airline'
 " file explorer
 Plug 'preservim/nerdtree'
+" froggie
 Plug 'christoomey/vim-tmux-navigator'
+"Linting client
+Plug 'vim-syntastic/syntastic'
 
 call plug#end()
 "PLUGINS END
@@ -129,3 +132,34 @@ nnoremap <silent> <Esc>j :TmuxNavigateDown<cr>
 nnoremap <silent> <Esc>k :TmuxNavigateUp<cr>
 nnoremap <silent> <Esc>l :TmuxNavigateRight<cr>
 nnoremap <silent> <Esc>\ :TmuxNavigatePrevious<cr>
+
+"vim fugitive make Gdiff vertical
+set diffopt+=vertical
+
+"linter settings
+let g:syntastic_cpp_checkers = ['cpplint']
+let g:syntastic_c_checkers = ['cpplint']
+let g:syntastic_cpp_cpplint_exec = 'cpplint'
+" The following two lines are optional. Configure it to your liking!
+let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+
+
+" remove highlighting
+noremap <silent> <leader>n :noh<cr> 
+
+"terminal debug settings
+let g:termdebug_wide=1 "split it vertically
+packadd termdebug "load termdebug on startup
+"mapping to load termdebug
+noremap <silent> <leader>td :Termdebug<cr> 
+" Add mappings for gdb commands
+noremap <silent> <leader>ds :Step<cr>
+noremap <silent> <leader>dn :Over<cr>
+noremap <silent> <leader>db :Break<cr>
+noremap <silent> <leader>df :Finish<cr>
+noremap <silent> <leader>dh :Stop<cr>
+noremap <silent> <leader>dr :Run<cr>
+noremap <silent> <leader>dc :Continue<cr>
+noremap <silent> <leader>dd :Clear<cr>
+

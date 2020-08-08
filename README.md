@@ -1,12 +1,16 @@
 # dotfiles
 # TODO for future Kenny
-- Ensure user is named kennyosele
-- Install zsh
-- Install oh my zsh 
-  - $ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-- Install powerlevel9k or 10k
-  - git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
-  - git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+- For Bash
+  - edit .profile to source bashrc
+- For ZSH
+  - Ensure user is named kennyosele
+  - Install zsh
+  - Install oh my zsh 
+    - $ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  - Install powerlevel9k or 10k
+    - git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
+    - git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+ - edit .name_yaself to set TOASTER(git server) WSL or FREEBIE(freebsd)
  - Install tmux
  - Install stow
  - go to dotfiles directory

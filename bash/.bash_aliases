@@ -1,6 +1,7 @@
 #ssh
 alias freebies='ssh root@192.168.169.128'
 alias wesuck='ssh root@192.168.169.131'
+alias toughie='ssh root@192.168.90.129'
 alias hless='ssh -X kennyosele@toshiba-toaster.duckdns.org'
 
 
@@ -46,7 +47,7 @@ alias t='time'
 alias k='kill -9'
 alias n='nvim'
 alias edal='vim ~/.bash_aliases'
-alias upbash='source ~/.zshrc'
+alias upbash='source ~/.bash_aliases'
 
 
 #git
@@ -73,10 +74,18 @@ case "$ITISI" in
       alias rmn='minion && cd bin && ./companion -i companion.cfg &'
       alias rps='pcaps && cd bin && ./pcap_query_server -i pcap_query_server.cfg &'
       alias mnt='kldload fuse.ko && vmhgfs-fuse .host:/CESI CESI'
+      alias pcaps='work && cd pcap_query_server/bsd_build'
+      alias sg='work && cd ServicesGui/'
+      alias shared='work && cd Shared/'
+      alias spcap='work && cd SharedPcap/'
+      alias cscan='work && cd CesiscanExe/'
+      alias ta='work && cd talonAgent/'
+      alias minion='work && cd cesi_sg_companion/bsd_build/'
       ;;
    WSL)
       alias home='cd /mnt/c/Code'
       alias csg='cd /mnt/c/ProgramData/CyberESI/CesiSG/'
       alias file='explorer.exe .'
+      alias drop_cache="sudo sh -c \"echo 3 >'/proc/sys/vm/drop_caches' && swapoff -a && swapon -a && printf '\n%s\n' 'Ram-cache and Swap Cleared'\""
       ;;
 esac
