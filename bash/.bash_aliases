@@ -30,7 +30,7 @@ alias cscan='work && cd CesiscanExe/head'
 alias ta='work && cd talonAgent/head'
 
 
-alias checkrun='sockstat | grep 133'
+alias cr='sockstat | grep 133'
 
 
 #basic commands
