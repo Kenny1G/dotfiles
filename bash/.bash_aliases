@@ -24,10 +24,12 @@ alias work='home && cd CESI'
 alias minion='work && cd cesi_sg_companion/head/bsd_build/'
 alias pcaps='work && cd pcap_query_server/head/bsd_build'
 alias sg='work && cd ServicesGui/head'
+alias sc='work && cd servicesCLI/'
 alias shared='work && cd Shared/head/'
 alias spcap='work && cd SharedPcap/head'
 alias cscan='work && cd CesiscanExe/head'
 alias ta='work && cd talonAgent/head'
+alias cesg='cd /mnt/c/ProgramData/CyberESI/CesiSG/'
 
 
 alias checkrun='sockstat | grep 133'
