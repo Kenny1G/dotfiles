@@ -16,7 +16,7 @@ alias g+++='g++ -Wall -pedantic -Wextra -g'
 ##From home
 alias gang='home && cd ganggang'
 alias sss='home && cd HYO/SpotifySucks'
-alias hw='home && cd HYO/hollowic/music-player'
+alias hw='home && cd HYO/hollowic/music-player/src'
 alias hb='home && cd HYO/hollowic/music-player-backend'
 
 ## From work
