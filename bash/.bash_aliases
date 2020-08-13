@@ -65,11 +65,12 @@ alias gcout='git checkout'
 alias mer='git merge --no-ff'
 
 
+export DISPLAY=192.168.1.151:1.0
+
 #System Specifics
 case "$ITISI" in 
    TOASTER)
       alias home='cd ~'
-      export DISPLAY=192.168.1.151:1.0
       ;;
    FREEBIE)
       alias home='cd ~'
