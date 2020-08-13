@@ -32,7 +32,7 @@ alias ta='work && cd talonAgent/head'
 alias cesg='cd /mnt/c/ProgramData/CyberESI/CesiSG/'
 
 
-alias checkrun='sockstat | grep 133'
+alias cr='sockstat | grep 133'
 
 
 #basic commands
