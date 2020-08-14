@@ -75,6 +75,8 @@ case "$ITISI" in
    FREEBIE)
       alias home='cd ~'
       alias rmn='minion && cd bin && ./companion -i companion.cfg &'
+      alias rsc='sc && cd bsd_build/obj && ./talonCLI.full -i hub.cfg'
+      alias csc='sc && make'
       alias rps='pcaps && cd bin && ./pcap_query_server -i pcap_query_server.cfg &'
       alias mnt='kldload fuse.ko && vmhgfs-fuse .host:/CESI CESI'
       alias pcaps='work && cd pcap_query_server/bsd_build'
