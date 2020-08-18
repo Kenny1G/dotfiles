@@ -11,7 +11,7 @@ set showcmd "show command in bottom bar
 set cursorline  "highlight current line
 filetype indent on "load filetype-specific indent files
 set wildmenu "visual autocomplete for command menu
-set lazyredraw "redraw only when we need to
+" set lazyredraw "redraw only when we need to
 set showmatch "highlight matching brackets
 set incsearch "search as characters are entered
 set hlsearch "highlight matches
@@ -56,7 +56,7 @@ Plug 'preservim/nerdtree'
 " froggie
 Plug 'christoomey/vim-tmux-navigator'
 "Linting client
-Plug 'vim-syntastic/syntastic'
+"Plug 'vim-syntastic/syntastic'
 
 call plug#end()
 "PLUGINS END
@@ -148,18 +148,26 @@ let g:syntastic_check_on_open = 1
 " remove highlighting
 noremap <silent> <leader>n :noh<cr> 
 
-"terminal debug settings
-let g:termdebug_wide=1 "split it vertically
-packadd termdebug "load termdebug on startup
-"mapping to load termdebug
-noremap <silent> <leader>td :Termdebug<cr> 
-" Add mappings for gdb commands
-noremap <silent> <leader>ds :Step<cr>
-noremap <silent> <leader>dn :Over<cr>
-noremap <silent> <leader>db :Break<cr>
-noremap <silent> <leader>df :Finish<cr>
-noremap <silent> <leader>dh :Stop<cr>
-noremap <silent> <leader>dr :Run<cr>
-noremap <silent> <leader>dc :Continue<cr>
-noremap <silent> <leader>dd :Clear<cr>
 
+"May the buff be with you
+" previous buffer
+nnoremap gp :bp<CR>
+" next buffer
+nnoremap gn :bn<CR>
+" List all possible buffers with "gl"
+nnoremap gl :ls<CR>
+" List all possible buffers with "gb" and accept a new buffer argument
+nnoremap gu :ls<CR>:b 
+" opens a new buffer with the current buffer's path
+map <leader>e :edit <c-r>=expand("%:p:h")<cr>/
+" Close the current buffer
+map <leader>d :bd<cr>  
+" Close all the buffers
+map gw :1,1000 bd!<cr> 
+" Switch CWD to the directory of the open buffer
+map <leader>cd :cd %:p:h<cr>:pwd<cr>
+
+
+
+" get rid of windows line endings
+nnoremap fk :%s/\r//g<CR>
