@@ -24,13 +24,15 @@ alias work='home && cd CESI'
 alias minion='work && cd cesi_sg_companion/head/bsd_build/'
 alias pcaps='work && cd pcap_query_server/head/bsd_build'
 alias sg='work && cd ServicesGui/head'
+alias sc='work && cd servicesCLI/'
 alias shared='work && cd Shared/head/'
 alias spcap='work && cd SharedPcap/head'
 alias cscan='work && cd CesiscanExe/head'
 alias ta='work && cd talonAgent/head'
+alias cesg='cd /mnt/c/ProgramData/CyberESI/CesiSG/'
 
 
-alias checkrun='sockstat | grep 133'
+alias cr='sockstat | grep 133'
 
 
 #basic commands
@@ -63,15 +65,18 @@ alias gcout='git checkout'
 alias mer='git merge --no-ff'
 
 
+export DISPLAY=192.168.1.151:1.0
+
 #System Specifics
 case "$ITISI" in 
    TOASTER)
       alias home='cd ~'
-      export DISPLAY=192.168.1.151:1.0
       ;;
    FREEBIE)
       alias home='cd ~'
       alias rmn='minion && cd bin && ./companion -i companion.cfg &'
+      alias rsc='sc && cd bsd_build/obj && ./talonCLI.full -i hub.cfg'
+      alias csc='sc && make'
       alias rps='pcaps && cd bin && ./pcap_query_server -i pcap_query_server.cfg &'
       alias mnt='kldload fuse.ko && vmhgfs-fuse .host:/CESI CESI'
       alias pcaps='work && cd pcap_query_server/bsd_build'
