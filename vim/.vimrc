@@ -57,7 +57,8 @@ Plug 'preservim/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
 "Linting client
 "Plug 'vim-syntastic/syntastic'
-
+"Syntax highlighting
+Plug 'jackguo380/vim-lsp-cxx-highlight'
 call plug#end()
 "PLUGINS END
 
@@ -171,3 +172,8 @@ map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " get rid of windows line endings
 nnoremap fk :%s/\r//g<CR>
+
+" c++ syntax highlighting
+let g:cpp_class_scope_highlight = 1
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_decl_highlight = 1
