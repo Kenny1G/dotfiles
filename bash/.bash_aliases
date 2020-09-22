@@ -30,6 +30,8 @@ alias shared='work && cd Shared/head/'
 alias spcap='work && cd SharedPcap/head'
 alias cscan='work && cd CesiscanExe/head'
 alias ta='work && cd talonAgent/head'
+
+
 alias cesg='cd /mnt/c/ProgramData/CyberESI/CesiSG/'
 
 
@@ -93,5 +95,6 @@ case "$ITISI" in
       alias csg='cd /mnt/c/ProgramData/CyberESI/CesiSG/'
       alias file='explorer.exe .'
       alias drop_cache="sudo sh -c \"echo 3 >'/proc/sys/vm/drop_caches' && swapoff -a && swapon -a && printf '\n%s\n' 'Ram-cache and Swap Cleared'\""
+      alias stan="cd \"/mnt/c/Users/osele/OneDrive - Stanford/Stanny\""
       ;;
 esac
