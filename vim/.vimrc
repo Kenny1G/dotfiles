@@ -30,6 +30,7 @@ set colorcolumn=80 "show a line in column 80
 set wrap
 set cmdheight=2
 set backspace=indent,eol,start  " more powerful backspacing
+set clipboard=exclude:.*  "don't try x11 clipboard shenanigans
 
 "PLUGINS
 call plug#begin('~/.vim/plugged')
