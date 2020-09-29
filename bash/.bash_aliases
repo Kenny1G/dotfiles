@@ -68,7 +68,7 @@ alias gcout='git checkout'
 alias mer='git merge --no-ff'
 
 
-export DISPLAY=192.168.1.151:1.0
+export DISPLAY=10.28.173.61:1.0
 
 #System Specifics
 case "$ITISI" in 
