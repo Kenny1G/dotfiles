@@ -94,7 +94,7 @@ case "$ITISI" in
       alias dqs='rh && cd dummy_query_server/usr.bin/dqs'
 
       #running stuff
-      alias ccc='cc -Wall -pedantic -Wextra -g'
+      alias ccc='cc -I/usr/local/include -L/usr/local/lib -Wall -pedantic -Wextra -g -lzmq' 
       alias c+++='c++ -Wall -pedantic -Wextra -g'
       ;;
    WSL)
