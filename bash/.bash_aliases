@@ -77,6 +77,7 @@ case "$ITISI" in
       alias home='cd ~'
       ;;
    FREEBIE)
+      #directories
       alias home='cd ~'
       alias rmn='minion && cd bin && ./companion -i companion.cfg &'
       alias rsc='sc && cd bsd_build/obj && ./talonCLI.full -i hub.cfg'
@@ -91,6 +92,10 @@ case "$ITISI" in
       alias ta='work && cd talonAgent/'
       alias minion='work && cd cesi_sg_companion/bsd_build/'
       alias dqs='rh && cd dummy_query_server/usr.bin/dqs'
+
+      #running stuff
+      alias ccc='cc -Wall -pedantic -Wextra -g'
+      alias c+++='c++ -Wall -pedantic -Wextra -g'
       ;;
    WSL)
       alias home='cd /mnt/c/Code'
