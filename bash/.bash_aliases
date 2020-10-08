@@ -30,6 +30,7 @@ alias shared='work && cd Shared/head/'
 alias spcap='work && cd SharedPcap/head'
 alias cscan='work && cd CesiscanExe/head'
 alias ta='work && cd talonAgent/head'
+alias rh='work && cd Research'
 
 
 alias cesg='cd /mnt/c/ProgramData/CyberESI/CesiSG/'
@@ -89,6 +90,7 @@ case "$ITISI" in
       alias cscan='work && cd CesiscanExe/'
       alias ta='work && cd talonAgent/'
       alias minion='work && cd cesi_sg_companion/bsd_build/'
+      alias dqs='rh && cd dummy_query_server/usr.bin/dqs'
       ;;
    WSL)
       alias home='cd /mnt/c/Code'
