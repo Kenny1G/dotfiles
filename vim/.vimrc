@@ -59,7 +59,7 @@ Plug 'christoomey/vim-tmux-navigator'
 "Linting client
 "Plug 'vim-syntastic/syntastic'
 "Syntax highlighting
-Plug 'jackguo380/vim-lsp-cxx-highlight'
+"Plug 'jackguo380/vim-lsp-cxx-highlight'
 call plug#end()
 "PLUGINS END
 

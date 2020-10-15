@@ -92,6 +92,8 @@ case "$ITISI" in
       alias ta='work && cd talonAgent/'
       alias minion='work && cd cesi_sg_companion/bsd_build/'
       alias dqs='rh && cd dummy_query_server/usr.bin/dqs'
+      alias clnt='work && cd bhn_orchestrator/lib/liborchestrator_module_pcap_query_client'
+      alias orc='work && cd bhn_orchestrator/usr.sbin/bhnorchestrator'
 
       #running stuff
       alias ccc='cc -I/usr/local/include -L/usr/local/lib -Wall -pedantic -Wextra -g -lzmq' 
