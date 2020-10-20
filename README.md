@@ -27,3 +27,5 @@
   - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh
   - zsh && nvm install node
 
+## TODO
+- (10/20/2020) Move aliases into their own rc file and just source them from the conditional
