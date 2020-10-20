@@ -94,6 +94,7 @@ case "$ITISI" in
       alias dqs='rh && cd dummy_query_server/usr.bin/dqs'
       alias clnt='work && cd bhn_orchestrator/lib/liborchestrator_module_pcap_query_client'
       alias orc='work && cd bhn_orchestrator/usr.sbin/bhnorchestrator'
+		alias pub='rh && cd zmqpub/usr.bin/zmqpub && obj/zmqpub.full sample.json'
 
       #running stuff
       alias ccc='cc -I/usr/local/include -L/usr/local/lib -Wall -pedantic -Wextra -g -lzmq' 
