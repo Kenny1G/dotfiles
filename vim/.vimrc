@@ -173,6 +173,9 @@ map gw :1,1000 bd!<cr>
 " Switch CWD to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
+" CTRL 6 no work with coc
+map <leader>6 :e # <CR>
+
 
 
 " get rid of windows line endings
