@@ -31,6 +31,7 @@ set wrap
 set cmdheight=2
 set backspace=indent,eol,start  " more powerful backspacing
 set clipboard=exclude:.*  "don't try x11 clipboard shenanigans
+set hidden "allow changing buffers without saving
 
 "PLUGINS
 call plug#begin('~/.vim/plugged')
