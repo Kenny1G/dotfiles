@@ -180,7 +180,7 @@ map <leader>6 :e # <CR>
 
 
 " get rid of windows line endings
-nnoremap fk :%s/\r//g<CR>
+nnoremap <silent><leader>gk :%s/\r//g<CR>
 
 " c++ syntax highlighting
 let g:cpp_class_scope_highlight = 1

@@ -94,9 +94,15 @@ case "$ITISI" in
       alias dqs='rh && cd dummy_query_server/usr.bin/dqs'
       alias clnt='work && cd bhn_orchestrator/lib/liborchestrator_module_pcap_query_client'
       alias orc='work && cd bhn_orchestrator/usr.sbin/bhnorchestrator'
-		alias pub='rh && cd zmqpub/usr.bin/zmqpub && obj/zmqpub.full sample.json'
-
       #running stuff
+		function pub() { 
+			readonly filename=${1:?"You must specify a JSON file to send to orchestrator."}
+			filepath="/home/setup/CESI/Research/zmqpub/usr.bin/zmqpub/"
+			filesize=$(($(wc -c < "$filepath$filename")))
+
+			cd $filepath 
+			(obj/zmqpub.full -s $filesize < "$filepath$filename")
+		}
       alias ccc='cc -I/usr/local/include -L/usr/local/lib -Wall -pedantic -Wextra -g -lzmq' 
       alias c+++='c++ -Wall -pedantic -Wextra -g'
       ;;
