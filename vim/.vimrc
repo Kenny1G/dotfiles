@@ -170,7 +170,7 @@ map <leader>e :edit <c-r>=expand("%:p:h")<cr>/
 " Close the current buffer
 map <leader>d :bd<cr>  
 " Close all the buffers
-map gw :1,1000 bd!<cr> 
+map gw :%bd\|e#\|bd#<cr> 
 " Switch CWD to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 

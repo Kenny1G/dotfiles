@@ -98,15 +98,19 @@ case "$ITISI" in
 		function pub() { 
 			current_directory=$(pwd)
 			readonly filename=${1:?"You must specify a JSON file to send to orchestrator."}
-			filepath="/home/setup/CESI/Research/zmqpub/usr.bin/zmqpub/"
-			filesize=$(($(wc -c < "$filepath$filename")))
+			#CHANGE ME TO LOCATION OF zmqpub FOLDER
+			homepath="/home/setup/CESI/Research/"
+			filepath="${homepath}zmqpub/usr.bin/zmqpub/obj"
+			docpath="${homepath}zmqpub/docs/"
+			filesize=$(($(wc -c < "$docpath$filename")))
 
-			cd $filepath 
-			(obj/zmqpub.full -s $filesize < "$filepath$filename")
+			cd $filepath
+			(./zmqpub.full -s $filesize < "$docpath$filename")
 			cd $current_directory
 		}
       alias ccc='cc -I/usr/local/include -L/usr/local/lib -Wall -pedantic -Wextra -g -lzmq' 
       alias c+++='c++ -Wall -pedantic -Wextra -g'
+		export PATH="$HOME/.local/bin:$PATH"
       ;;
    WSL)
       alias home='cd /mnt/c/Code'
