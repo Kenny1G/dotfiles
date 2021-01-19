@@ -69,7 +69,7 @@ alias gcout='git checkout'
 alias mer='git merge --no-ff'
 
 
-export DISPLAY=10.28.173.61:1.0
+export DISPLAY=10.128.0.32:1.0
 
 #System Specifics
 case "$ITISI" in 
@@ -115,8 +115,10 @@ case "$ITISI" in
    WSL)
       alias home='cd /mnt/c/Code'
       alias csg='cd /mnt/c/ProgramData/CyberESI/CesiSG/'
-      alias file='explorer.exe .'
+      alias fil='explorer.exe .'
       alias drop_cache="sudo sh -c \"echo 3 >'/proc/sys/vm/drop_caches' && swapoff -a && swapon -a && printf '\n%s\n' 'Ram-cache and Swap Cleared'\""
-      alias stan="cd \"/mnt/c/Users/osele/OneDrive - Stanford/Stanny\""
+      alias stan="cd \"/mnt/c/Users/osele/OneDrive - Stanford/Stanny\"" 
+		alias len='home && cd LEARNING'
+		alias cse='cd $CS107E'
       ;;
 esac
