@@ -1,7 +1,7 @@
 " SOME DEFAULTS
 syntax enable
-set tabstop=3 "3 chars long
-set softtabstop=3 "3 spaces long
+set tabstop=4 "3 chars long
+set softtabstop=4 "3 spaces long
 set shiftwidth=0 "arrows moves 'tabstop' spaces
 set noexpandtab "use tabs not spaces
 set smartindent "tries to indent for you

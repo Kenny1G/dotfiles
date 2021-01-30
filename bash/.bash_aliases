@@ -69,7 +69,6 @@ alias gcout='git checkout'
 alias mer='git merge --no-ff'
 
 
-export DISPLAY=10.128.0.32:1.0
 
 #System Specifics
 case "$ITISI" in 
@@ -112,7 +111,8 @@ case "$ITISI" in
       alias c+++='c++ -Wall -pedantic -Wextra -g'
 		export PATH="$HOME/.local/bin:$PATH"
       ;;
-   WSL)
+   WSL) 
+	  export DISPLAY=:1.0
       alias home='cd /mnt/c/Code'
       alias csg='cd /mnt/c/ProgramData/CyberESI/CesiSG/'
       alias fil='explorer.exe .'
