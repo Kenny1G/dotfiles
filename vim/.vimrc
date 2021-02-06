@@ -32,6 +32,10 @@ set cmdheight=2
 set backspace=indent,eol,start  " more powerful backspacing
 set clipboard=exclude:.*  "don't try x11 clipboard shenanigans
 set hidden "allow changing buffers without saving
+if has("gui_running")
+    set guifont=Mono\ 14
+    set linespace=5
+endif
 
 "PLUGINS
 call plug#begin('~/.vim/plugged')
