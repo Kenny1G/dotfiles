@@ -68,4 +68,5 @@ export PATH=$HOME/gems/bin:$PATH
 #For CS107E class
 export CS107E=/mnt/c/Code/LEARNING/cs107e_home/cs107e.github.io/cs107e
 export PATH=$PATH:$CS107E/bin
+export PATH=$PATH:$HOME/.local/bin
 

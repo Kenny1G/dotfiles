@@ -112,13 +112,15 @@ case "$ITISI" in
 		export PATH="$HOME/.local/bin:$PATH"
       ;;
    WSL) 
-	  export DISPLAY=:1.0
+	  export DISPLAY=:0.0
       alias home='cd /mnt/c/Code'
       alias csg='cd /mnt/c/ProgramData/CyberESI/CesiSG/'
       alias fil='explorer.exe .'
       alias drop_cache="sudo sh -c \"echo 3 >'/proc/sys/vm/drop_caches' && swapoff -a && swapon -a && printf '\n%s\n' 'Ram-cache and Swap Cleared'\""
       alias stan="cd \"/mnt/c/Users/osele/OneDrive - Stanford/Stanny\"" 
-		alias len='home && cd LEARNING'
-		alias cse='cd $CS107E'
+      alias len='home && cd LEARNING' 
+      alias cse='cd $CS107E'
+      alias ass='len && cd cs107e_home && cd assignments'
+      alias pip='pip3'
       ;;
 esac

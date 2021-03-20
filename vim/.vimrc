@@ -1,10 +1,10 @@
 " SOME DEFAULTS
 syntax enable
-set tabstop=4 "3 chars long
-set softtabstop=4 "3 spaces long
-set shiftwidth=0 "arrows moves 'tabstop' spaces
-set noexpandtab "use tabs not spaces
-set smartindent "tries to indent for you
+set tabstop=4 "show existing tab with 4 spaces
+" set softtabstop=4 "4 spaces long
+set shiftwidth=4 "arrows moves 'tabstop' spaces
+set expandtab "use spaces
+" set smartindent "tries to indent for you
 set number
 set smartcase "case insensitive search until I put in a capital letter
 set showcmd "show command in bottom bar
@@ -32,6 +32,7 @@ set cmdheight=2
 set backspace=indent,eol,start  " more powerful backspacing
 set clipboard=exclude:.*  "don't try x11 clipboard shenanigans
 set hidden "allow changing buffers without saving
+set mouse=a "use mouse
 if has("gui_running")
     set guifont=Mono\ 14
     set linespace=5
@@ -112,15 +113,15 @@ function! s:check_back_space() abort
 endfunction
 
 
-"fun! GoCoc()
 "required COC function
- inoremap  <silent><expr> <TAB>
-             \ pumvisible() ? "\<C-n>" :
-             \ <SID>check_back_space() ? "\<TAB>" :
-             \ coc#refresh()
+inoremap  <silent><expr> <TAB>
+            \ pumvisible() ? "\<C-n>" :
+            \ <SID>check_back_space() ? "\<TAB>" :
+            \ coc#refresh()
 
- inoremap  <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
- inoremap  <silent><expr> <C-space> coc#refresh()
+inoremap  <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" Use <c-@> to trigger completion.
+inoremap <silent><expr> <c-@> coc#refresh()
 
  " GoTo code navigation.
  nmap  <leader>gd <Plug>(coc-definition)
@@ -128,8 +129,24 @@ endfunction
  nmap  <leader>gi <Plug>(coc-implementation)
  nmap  <leader>gr <Plug>(coc-references)
  nnoremap  <leader>cr :CocRestart
-"endfun
 
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
+
+" Remap <C-f> and <C-b> for scroll float windows/popups.
+if has('nvim-0.4.0') || has('patch-8.2.0750')
+  nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+  nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+  inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+  inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+  vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+  vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+endif
+
+" Applying codeAction to the selected region.
+" Example: `<leader>aap` for current paragraph
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 "tmux navigation with Alt
 let g:tmux_navigator_no_mappings = 1
