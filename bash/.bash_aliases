@@ -4,6 +4,7 @@ alias wesuck='ssh root@192.168.169.131'
 alias toughie='ssh root@192.168.90.129'
 alias biggie='ssh setup@192.168.90.35'
 alias hless='ssh -X kennyosele@toshiba-toaster.duckdns.org'
+alias loccie='ssh kennyosele@10.129.9.54'
 
 
 
