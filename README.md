@@ -26,6 +26,30 @@
 - install nvm 
   - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh
   - zsh && nvm install node
+- Install the following coc extensions:
+    - coc-json
+    - coc-pyright
+- Install [ccls](https://github.com/MaskRay/ccls/wiki/Build)
+- Add the following to your CocConfig
+```
+{"languageserver": {
+    "ccls": {
+      "command": "ccls",
+      "args": ["--log-file=/tmp/ccls.log", "-v=1"],
+      "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
+      "rootPatterns": [".ccls", "compile_commands.json"],
+      "initializationOptions": {
+         "cache": {
+           "directory": "/tmp/ccls"
+         },
+         "client": {
+          "snippetSupport": true
+         }
+       }
+    }
+  }}
+```
+- 
 
 ## TODO
 - (10/20/2020) Move aliases into their own rc file and just source them from the conditional
