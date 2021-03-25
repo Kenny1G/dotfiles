@@ -73,28 +73,28 @@ alias mer='git merge --no-ff'
 
 #System Specifics
 case "$ITISI" in 
-   TOASTER)
-      alias home='cd ~'
-      ;;
-   FREEBIE)
-      #directories
-      alias home='cd ~'
-      alias rmn='minion && cd bin && ./companion -i companion.cfg &'
-      alias rsc='sc && cd bsd_build/obj && ./talonCLI.full -i hub.cfg'
-      alias csc='sc && make'
-      alias rps='pcaps && cd bin && ./pcap_query_server -i pcap_query_server.cfg &'
-      alias mnt='kldload fuse.ko && vmhgfs-fuse .host:/CESI CESI'
-      alias pcaps='work && cd pcap_query_server/bsd_build'
-      alias sg='work && cd ServicesGui/'
-      alias shared='work && cd Shared/'
-      alias spcap='work && cd SharedPcap/'
-      alias cscan='work && cd CesiscanExe/'
-      alias ta='work && cd talonAgent/'
-      alias minion='work && cd cesi_sg_companion/bsd_build/'
-      alias dqs='rh && cd dummy_query_server/usr.bin/dqs'
-      alias clnt='work && cd bhn_orchestrator/lib/liborchestrator_module_pcap_query_client'
-      alias orc='work && cd bhn_orchestrator/usr.sbin/bhnorchestrator'
-      #running stuff
+	TOASTER)
+		alias home='cd ~'
+		;;
+	FREEBIE)
+		#directories
+		alias home='cd ~'
+		alias rmn='minion && cd bin && ./companion -i companion.cfg &'
+		alias rsc='sc && cd bsd_build/obj && ./talonCLI.full -i hub.cfg'
+		alias csc='sc && make'
+		alias rps='pcaps && cd bin && ./pcap_query_server -i pcap_query_server.cfg &'
+		alias mnt='kldload fuse.ko && vmhgfs-fuse .host:/CESI CESI'
+		alias pcaps='work && cd pcap_query_server/bsd_build'
+		alias sg='work && cd ServicesGui/'
+		alias shared='work && cd Shared/'
+		alias spcap='work && cd SharedPcap/'
+		alias cscan='work && cd CesiscanExe/'
+		alias ta='work && cd talonAgent/'
+		alias minion='work && cd cesi_sg_companion/bsd_build/'
+		alias dqs='rh && cd dummy_query_server/usr.bin/dqs'
+		alias clnt='work && cd bhn_orchestrator/lib/liborchestrator_module_pcap_query_client'
+		alias orc='work && cd bhn_orchestrator/usr.sbin/bhnorchestrator'
+		#running stuff
 		function pub() { 
 			current_directory=$(pwd)
 			readonly filename=${1:?"You must specify a JSON file to send to orchestrator."}
@@ -108,20 +108,21 @@ case "$ITISI" in
 			(./zmqpub.full -s $filesize < "$docpath$filename")
 			cd $current_directory
 		}
-      alias ccc='cc -I/usr/local/include -L/usr/local/lib -Wall -pedantic -Wextra -g -lzmq' 
-      alias c+++='c++ -Wall -pedantic -Wextra -g'
-		export PATH="$HOME/.local/bin:$PATH"
-      ;;
-   WSL) 
-	  export DISPLAY=:0.0
-      alias home='cd /mnt/c/Code'
-      alias csg='cd /mnt/c/ProgramData/CyberESI/CesiSG/'
-      alias fil='explorer.exe .'
-      alias drop_cache="sudo sh -c \"echo 3 >'/proc/sys/vm/drop_caches' && swapoff -a && swapon -a && printf '\n%s\n' 'Ram-cache and Swap Cleared'\""
-      alias stan="cd \"/mnt/c/Users/osele/OneDrive - Stanford/Stanny\"" 
-      alias len='home && cd LEARNING' 
-      alias cse='cd $CS107E'
-      alias ass='len && cd cs107e_home && cd assignments'
-      alias pip='pip3'
-      ;;
+	alias ccc='cc -I/usr/local/include -L/usr/local/lib -Wall -pedantic -Wextra -g -lzmq' 
+	alias cppp='c++ -Wall -pedantic -Wextra -g' 
+	export PATH="$HOME/.local/bin:$PATH"
+	alias orcreset='sudo rm /var/db/orchestrator/'
+	;;
+WSL) 
+	export DISPLAY=:0.0
+	alias home='cd /mnt/c/Code'
+	alias csg='cd /mnt/c/ProgramData/CyberESI/CesiSG/'
+	alias fil='explorer.exe .'
+	alias drop_cache="sudo sh -c \"echo 3 >'/proc/sys/vm/drop_caches' && swapoff -a && swapon -a && printf '\n%s\n' 'Ram-cache and Swap Cleared'\""
+	alias stan="cd \"/mnt/c/Users/osele/OneDrive - Stanford/Stanny\"" 
+	alias len='home && cd LEARNING' 
+	alias cse='cd $CS107E'
+	alias ass='len && cd cs107e_home && cd assignments'
+	alias pip='pip3'
+	;;
 esac
