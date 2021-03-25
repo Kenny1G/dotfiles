@@ -97,7 +97,7 @@ case "$ITISI" in
 		#running stuff
 		function pub() { 
 			current_directory=$(pwd)
-			readonly filename=${1:?"You must specify a JSON file to send to orchestrator."}
+			readonly filename=${1:?"[-] You must specify a JSON file to send to orchestrator."}
 			#CHANGE ME TO LOCATION OF zmqpub FOLDER
 			homepath="/home/setup/CESI/Research/"
 			filepath="${homepath}zmqpub/usr.bin/zmqpub/obj"
@@ -111,7 +111,7 @@ case "$ITISI" in
 	alias ccc='cc -I/usr/local/include -L/usr/local/lib -Wall -pedantic -Wextra -g -lzmq' 
 	alias cppp='c++ -Wall -pedantic -Wextra -g' 
 	export PATH="$HOME/.local/bin:$PATH"
-	alias orcreset='sudo rm /var/db/orchestrator/'
+	alias orcreset='sudo rm /var/db/orchestrator/db.sqlite3'
 	;;
 WSL) 
 	export DISPLAY=:0.0

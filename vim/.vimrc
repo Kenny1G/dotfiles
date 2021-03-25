@@ -53,7 +53,7 @@ Plug 'tpope/vim-fugitive'
 " don't know yet
 Plug 'vim-utils/vim-man'
 " don't know yet
-Plug 'lyuts/vim-rtags'
+"Plug 'lyuts/vim-rtags'
 " file search
 Plug 'git@github.com:kien/ctrlp.vim.git'
 " visual undo
