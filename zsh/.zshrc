@@ -54,7 +54,7 @@ export GPG_TTY=$(tty)
 export COLORTERM=yes
 
 source ~/.name_yaself
-source ~/.bash_aliases
+source ~/.zsh_aliases
 
 
 export NVM_DIR="$HOME/.nvm"

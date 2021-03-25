@@ -53,8 +53,8 @@ alias pd='pwd'
 alias t='time'
 alias k='kill -9'
 alias n='nvim'
-alias edal='vim ~/.bash_aliases'
-alias upbash='source ~/.bash_aliases'
+alias edal='vim ~/.zsh_aliases'
+alias upbash='source ~/.zsh_aliases'
 
 
 #git
