@@ -1,11 +1,15 @@
 " SOME DEFAULTS
 syntax enable
+
+"Tabs vs Spaces
 set tabstop=4 "show existing tab with 4 spaces
 " set softtabstop=4 "4 spaces long
-set shiftwidth=4 "arrows moves 'tabstop' spaces
-set expandtab "use spaces
-" set smartindent "tries to indent for you
+set shiftwidth=0 "arrows moves 'tabstop' spaces
+set noexpandtab "use tabs
+set smartindent "tries to indent for you
+
 set number
+set ignorecase "required for below
 set smartcase "case insensitive search until I put in a capital letter
 set showcmd "show command in bottom bar
 set cursorline  "highlight current line
@@ -30,7 +34,7 @@ set colorcolumn=80 "show a line in column 80
 set wrap
 set cmdheight=2
 set backspace=indent,eol,start  " more powerful backspacing
-set clipboard=exclude:.*  "don't try x11 clipboard shenanigans
+"set clipboard=exclude:.*  "don't try x11 clipboard shenanigans
 set hidden "allow changing buffers without saving
 set mouse=a "use mouse
 if has("gui_running")
@@ -49,7 +53,7 @@ Plug 'tpope/vim-fugitive'
 " don't know yet
 Plug 'vim-utils/vim-man'
 " don't know yet
-"Plug 'lyuts/vim-rtags'
+Plug 'lyuts/vim-rtags'
 " file search
 Plug 'git@github.com:kien/ctrlp.vim.git'
 " visual undo
@@ -99,7 +103,7 @@ nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>u :UndotreeShow<CR>
 "opens small file tree to the left
 nnoremap <leader>pv :NERDTreeFocus<Enter> 
-nnoremap <Leader>ps :Rg<SPACE>
+nnoremap <Leader>ps :Rg<CR>
 nnoremap <silent> <Leader>+ :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertical resize -5<CR>
 vnoremap J :m '>+1<CR>gv=gv
