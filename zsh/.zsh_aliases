@@ -81,21 +81,15 @@ case "$ITISI" in
 		export DISPLAY=main:0.0
 		#directories
 		alias home='cd ~'
-		alias rmn='minion && cd bin && ./companion -i companion.cfg &'
-		alias rsc='sc && cd bsd_build/obj && ./talonCLI.full -i hub.cfg'
-		alias csc='sc && make'
-		alias rps='pcaps && cd bin && ./pcap_query_server -i pcap_query_server.cfg &'
 		alias mnt='kldload fuse.ko && vmhgfs-fuse .host:/CESI CESI'
-		alias pcaps='work && cd pcap_query_server/bsd_build'
+		alias pcaps='work && cd src/pcap_query_server/bsd_build'
 		alias sg='work && cd ServicesGui/'
 		alias shared='work && cd Shared/'
 		alias spcap='work && cd SharedPcap/'
 		alias cscan='work && cd CesiscanExe/'
 		alias ta='work && cd talonAgent/'
-		alias minion='work && cd cesi_sg_companion/bsd_build/'
-		alias dqs='rh && cd dummy_query_server/usr.bin/dqs'
-		alias clnt='work && cd bhn_orchestrator/lib/liborchestrator_module_pcap_query_client'
-		alias orc='work && cd bhn_orchestrator/usr.sbin/bhnorchestrator'
+		alias clnt='work && cd src/bhn_orchestrator/lib/liborchestrator_module_pcap_query_client'
+		alias orc='work && cd src/bhn_orchestrator/usr.sbin/bhnorchestrator'
 		#running stuff
 		function pub() { 
 			current_directory=$(pwd)
