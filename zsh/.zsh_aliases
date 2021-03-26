@@ -78,6 +78,7 @@ case "$ITISI" in
 		alias home='cd ~'
 		;;
 	FREEBIE)
+		export DISPLAY=main:0.0
 		#directories
 		alias home='cd ~'
 		alias rmn='minion && cd bin && ./companion -i companion.cfg &'
