@@ -56,6 +56,9 @@ export COLORTERM=yes
 source ~/.name_yaself
 source ~/.zsh_aliases
 
+#For Rust
+source "$HOME/.cargo/env"
+
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

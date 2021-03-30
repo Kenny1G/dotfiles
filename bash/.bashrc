@@ -144,3 +144,4 @@ export PATH=$HOME/gems/bin:$PATH
 source ~/.name_yaself
 source ~/.bash_aliases
 
+source "$HOME/.cargo/env"
