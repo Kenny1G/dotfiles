@@ -103,7 +103,7 @@ nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>u :UndotreeShow<CR>
 "opens small file tree to the left
 nnoremap <leader>pv :NERDTreeFocus<Enter> 
-nnoremap <Leader>ps :Rg<CR>
+nnoremap <Leader>ps :Rg<Space>
 nnoremap <silent> <Leader>+ :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertical resize -5<CR>
 vnoremap J :m '>+1<CR>gv=gv

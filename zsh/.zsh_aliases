@@ -108,6 +108,8 @@ case "$ITISI" in
 	alias cppp='c++ -Wall -pedantic -Wextra -g' 
 	export PATH="$HOME/.local/bin:$PATH"
 	alias orcreset='sudo rm /var/db/orchestrator/db.sqlite3'
+	alias dmake='make BH_DEBUG=1 ASANIFY=1'
+	alias dbmake='bear make BH_DEBUG=1 ASANIFY=1'
 	;;
 WSL) 
 	export DISPLAY=:0.0
