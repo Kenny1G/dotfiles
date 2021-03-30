@@ -41,12 +41,15 @@ if has("gui_running")
     set guifont=Mono\ 14
     set linespace=5
 endif
+"split panes like your sane
+set splitbelow
+set splitright
 
 "PLUGINS
 call plug#begin('~/.vim/plugged')
 " Coconut oil
 Plug 'morhetz/gruvbox'
-" don't know yet
+" Recursively search directories for regex
 Plug 'jremmen/vim-ripgrep'
 " git
 Plug 'tpope/vim-fugitive'
@@ -72,7 +75,6 @@ Plug 'christoomey/vim-tmux-navigator'
 "Plug 'jackguo380/vim-lsp-cxx-highlight'
 call plug#end()
 "PLUGINS END
-
 
 "color scheme
 colorscheme gruvbox
@@ -100,12 +102,14 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 "move to left vim window
 nnoremap <leader>l :wincmd l<CR>
-nnoremap <leader>u :UndotreeShow<CR>
+nnoremap <leader>u :UndotreeFocus<CR>
 "opens small file tree to the left
 nnoremap <leader>pv :NERDTreeFocus<Enter> 
+"use rip greep
 nnoremap <Leader>ps :Rg<Space>
 nnoremap <silent> <Leader>+ :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertical resize -5<CR>
+"don't know
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
