@@ -70,7 +70,7 @@ Plug 'preservim/nerdtree'
 " froggie
 Plug 'christoomey/vim-tmux-navigator'
 "Linting client
-"Plug 'vim-syntastic/syntastic'
+Plug 'vim-syntastic/syntastic'
 "Syntax highlighting
 "Plug 'jackguo380/vim-lsp-cxx-highlight'
 call plug#end()
@@ -169,13 +169,17 @@ nnoremap <silent> <Esc>\ :TmuxNavigatePrevious<cr>
 set diffopt+=vertical
 
 "linter settings
-let g:syntastic_cpp_checkers = ['cpplint']
-let g:syntastic_c_checkers = ['cpplint']
-let g:syntastic_cpp_cpplint_exec = 'cpplint'
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_cpp_checkers = ['clang_tidy', 'cpplint']
+let g:syntastic_c_checkers = ['clang_tidy', 'cpplint']
+let g:syntastic_cpp_cpplint_exec = 'clang-tidy'
 " The following two lines are optional. Configure it to your liking!
 let g:syntastic_check_on_open = 1
 " let g:syntastic_check_on_wq = 0
-
+let g:syntastic_c_clang_tidy_post_args = ""
+let g:syntastic_clang_tidy_config_file = "compile_commands.json"
 
 " remove highlighting
 noremap <silent> <leader>n :noh<cr> 
