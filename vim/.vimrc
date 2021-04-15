@@ -38,7 +38,11 @@ set backspace=indent,eol,start  " more powerful backspacing
 set hidden "allow changing buffers without saving
 set mouse=a "use mouse
 if has("gui_running")
-    set guifont=Mono\ 14
+	if has("gui_gtk2")
+		set guifont=Mono\ 14
+	elseif has("gui_win32")
+		set guifont=Cascadia\ Mono\ Regular:h14
+	endif
     set linespace=5
 endif
 "split panes like your sane
@@ -102,13 +106,14 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 "move to left vim window
 nnoremap <leader>l :wincmd l<CR>
-nnoremap <leader>u :UndotreeFocus<CR>
+nnoremap <leader>u :UndotreeToggle<CR>:UndotreeFocus<CR>
 "opens small file tree to the left
 nnoremap <leader>pv :NERDTreeFocus<Enter> 
 "use rip greep
 nnoremap <Leader>ps :Rg<Space>
-nnoremap <silent> <Leader>+ :vertical resize +5<CR>
-nnoremap <silent> <Leader>- :vertical resize -5<CR>
+"quicker resize
+nnoremap <silent> <Leader>+ :resize +5<CR>
+nnoremap <silent> <Leader>- :resize -5<CR>
 "don't know
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
@@ -169,9 +174,6 @@ nnoremap <silent> <Esc>\ :TmuxNavigatePrevious<cr>
 set diffopt+=vertical
 
 "linter settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
 let g:syntastic_cpp_checkers = ['clang_tidy', 'cpplint']
 let g:syntastic_c_checkers = ['clang_tidy', 'cpplint']
 let g:syntastic_cpp_cpplint_exec = 'clang-tidy'
