@@ -72,4 +72,5 @@ export PATH=$HOME/gems/bin:$PATH
 export CS107E=/mnt/c/Code/LEARNING/cs107e_home/cs107e.github.io/cs107e
 export PATH=$PATH:$CS107E/bin
 export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:/mnt/c/Program\ Files\ (x86)/Vim/vim82/
 
