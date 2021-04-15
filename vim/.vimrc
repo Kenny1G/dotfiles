@@ -41,10 +41,19 @@ if has("gui_running")
 	if has("gui_gtk2")
 		set guifont=Mono\ 14
 	elseif has("gui_win32")
-		set guifont=Cascadia\ Mono\ Regular:h14
+		set guifont=Cascadia\ Mono\ Regular:h11
 	endif
     set linespace=5
 endif
+
+"use wsl for windows shell"
+if has("win32")
+    set shell=C:\Windows\System32\wsl.exe
+    set shellpipe=|
+    set shellredir=>
+    set shellcmdflag=
+endif
+
 "split panes like your sane
 set splitbelow
 set splitright
