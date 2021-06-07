@@ -122,5 +122,7 @@ WSL)
 	alias cse='cd $CS107E'
 	alias ass='len && cd cs107e_home && cd assignments'
 	alias pip='pip3'
+	#For Rust
+	source "$HOME/.cargo/env"
 	;;
 esac
