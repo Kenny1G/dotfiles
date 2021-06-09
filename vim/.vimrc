@@ -71,7 +71,7 @@ Plug 'vim-utils/vim-man'
 " don't know yet
 "Plug 'lyuts/vim-rtags'
 " file search
-Plug 'git@github.com:kien/ctrlp.vim.git'
+Plug 'kien/ctrlp.vim.git'
 " visual undo
 Plug 'mbbill/undotree'
 " auto complete
