@@ -8,6 +8,10 @@ set shiftwidth=0 "arrows moves 'tabstop' spaces
 set noexpandtab "use tabs
 set smartindent "tries to indent for you
 
+"show tabs
+set list
+set listchars=tab:>.
+
 set number
 set ignorecase "required for below
 set smartcase "case insensitive search until I put in a capital letter
@@ -37,6 +41,7 @@ set backspace=indent,eol,start  " more powerful backspacing
 "set clipboard=exclude:.*  "don't try x11 clipboard shenanigans
 set hidden "allow changing buffers without saving
 "set mouse=a "use mouse
+
 if has("gui_running")
 	if has("gui_gtk2")
 		set guifont=Mono\ 14
@@ -48,6 +53,12 @@ endif
 
 "use wsl for windows shell"
 if has("win32")
+	"use forward slashes in all windows paths
+	set shellslash
+
+	" get rid of toolbar
+	set guioptions-=T
+
     set shell=C:\Windows\WinSxS\amd64_microsoft-windows-lxss-wsl_31bf3856ad364e35_10.0.19041.488_none_60be8a5c2dce0ea7\wsl.exe
     set shellpipe=|
     set shellredir=>
@@ -71,7 +82,7 @@ Plug 'vim-utils/vim-man'
 " don't know yet
 "Plug 'lyuts/vim-rtags'
 " file search
-Plug 'kien/ctrlp.vim.git'
+Plug 'kien/ctrlp.vim'
 " visual undo
 Plug 'mbbill/undotree'
 " auto complete
