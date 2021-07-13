@@ -1,14 +1,14 @@
 "vanilla vim bindings
-source ~/.vim/config/native.vim
+source ~/.vimcfg/native.vim
 
 "windows/gui exclusive bindings
-source ~/.vim/config/windows.vim
+source ~/.vimcfg/windows.vim
 
 "Installed plugins
-source ~/.vim/config/plugins.vim
+source ~/.vimcfg/plugins.vim
 
 "mappings related to vim coc
-source ~/.vim/config/coc-mapping.vim
+source ~/.vimcfg/coc-mapping.vim
 
 "mappings and settings for all other plugins
-source ~/.vim/config/plugin-mappings.vim
+source ~/.vimcfg/plugin-mappings.vim
