@@ -4,7 +4,7 @@ set background=dark
 
 "allows rg to always detect root
 if executable('rg') 
-   let g:rg_derive_root='true'
+	let g:rg_derive_root='true'
 endif
 
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
