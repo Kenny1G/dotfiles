@@ -15,7 +15,7 @@ if has("win32")
 	" get rid of toolbar
 	set guioptions-=T
 
-    set shell=C:/Windows/system32/wsl.exe
+    set shell=C:\Windows\WinSxS\amd64_microsoft-windows-lxss-wsl_31bf3856ad364e35_10.0.19041.488_none_60be8a5c2dce0ea7\wsl.exe
     set shellpipe=|
     set shellredir=>
     set shellcmdflag=
